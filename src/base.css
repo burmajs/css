@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: Poppins, sans-serif;
+  --font-inter: Inter, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply scroll-auto m-0 p-0 border-spacing-0;
+  }
+  *,
+  *::before,
+  *::after {
+    @apply box-border;
+  }
+  header,
+  footer,
+  figure,
+  table,
+  video,
+  details,
+  blockquote,
+  ul,
+  ol,
+  dl,
+  fieldset,
+  pre,
+  pre > code,
+  caption {
+    @apply block mt-2 mx-0 mb-4 w-full text-left overflow-x-auto overflow-y-hidden;
+  }
+  a,
+  button,
+  select,
+  summary {
+    @apply outline-none;
+  }
+  a,
+  button,
+  select,
+  summary {
+    @apply text-teal-600 cursor-pointer;
+  }
+  /* 2. Base Style ––––––––––––––––––––––––––––––––––––––– */
+  html {
+    @apply bg-neutral-100 dark:bg-neutral-950 text-neutral-800 dark:text-neutral-200 font-poppins;
+  }
+  body {
+    @apply antialiased relative m-auto max-w-5xl pt-12 px-2 pb-0 overflow-x-hidden;
+  }
+  body > footer {
+    @apply text-[90%] mt-[10rem] mx-0 mb-0;
+  }
+  p {
+    @apply py-2.5 px-0;
+  }
+  /* links */
+  a[href^="http://"], a[href^="https://"]
+  {
+    @apply underline underline-offset-2 decoration-solid decoration-teal-600;
+  }
+  a[href^="#"] {
+    @apply no-underline;
+  }
+  a,
+  summary {
+    @apply hover:brightness-92 hover:text-[#673ab8];
+  }
+  button {
+    @apply not-disabled:hover:brightness-92 not-disabled:hover:text-[#673ab8];
+  }
+  /* lists */
+  ul,
+  ol,
+  dl {
+    @apply my-4 mx-0 pt-0 pr-0 pb-0 pl-2;
+  }
+  li,
+  dd {
+    @apply not-last:mb-2;
+  }
+  dt {
+    @apply font-bold;
+  }
+  /* headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply mt-4 mx-0 my-2 font-poppins clear-both;
+  }
+  h1 + h2,
+  h2 + h3,
+  h3 + h4,
+  h4 + h5 {
+    @apply mt-2 pt-0;
+  }
+  /* non-clashing headings */
+  h1 {
+    @apply text-[2.2em] font-[300];
+  }
+  h2 {
+    @apply text-[2em] font-[300];
+  }
+  h3 {
+    @apply text-[1.5em] font-[400];
+  }
+  h4 {
+    @apply text-[1.1em] font-[700];
+  }
+  h5 {
+    @apply text-[1.2em] font-[400];
+  }
+  h6 {
+    @apply text-[1em] font-[700] inline italic;
+  }
+  h6 + p {
+    @apply inline;
+  }
+  /* tables */
+  table {
+    @apply border-collapse m-auto w-[90%];
+  }
+  td,
+  th {
+    @apply border border-solid border-neutral-700 dark:border-neutral-50 text-left p-2;
+  }
+  th {
+    @apply bg-white dark:bg-black;
+  }
+  tr {
+    @apply odd:bg-neutral-100 even:bg-neutral-300 dark:odd:bg-neutral-900 dark:even:bg-neutral-950;
+  }
+  table img {
+    @apply block;
+  }
+  /* figures */
+  img,
+  svg {
+    @apply max-w-full align-text-top object-cover;
+  }
+  p > img:not(:only-child) {
+    @apply float-right mt-0 mr-0 mb-[0.5em] ml-[0.5em];
+  }
+  figure > img {
+    @apply inline-block w-auto;
+  }
+  figure > img:only-of-type,
+  figure > svg:only-of-type {
+    @apply max-w-full block mt-0 mx-auto mb-[0.4em];
+  }
+  figure > *:not(:last-child) {
+    @apply mb-[0.4em];
+  }
+  /* captions */
+  figcaption,
+  caption {
+    @apply text-left w-full font-inter;
+  }
+  figcaption > *:first-child,
+  caption > *:first-child {
+    @apply inline-block m-0;
+  }
+  table caption {
+    @apply last:caption-bottom last:my-[0.5em] last:mx-0;
+  }
+  /* code */
+  pre > code {
+    @apply relative p-[0.8em] border-l-[0.4em] border-l-teal-700 overflow-x-auto;
+  }
+  code,
+  kbd,
+  samp {
+    @apply p-[0.2em] font-mono bg-[#f5f6f7] dark:bg-[#333] rounded-[4px];
+  }
+  kbd {
+    @apply border-[#d1d1d1] dark:border-[#566] border-solid border-1;
+  }
+  /* misc */
+  blockquote {
+    @apply pt-0 pr-0 pb-0 pl-[1rem] border-l-[0.4rem] border-l-[#d1d1d1] dark:border-l-[#566];
+  }
+  time {
+    @apply text-[#888] dark:text-[#999];
+  }
+  hr {
+    @apply border-0 border-t-[0.1rem] border-t-[#d1d1d1] dark:border-t-[#566];
+  }
+  nav {
+    @apply w-full bg-[#f5f6f7] dark:bg-[#333];
+  }
+  ::selection,
+  mark {
+    @apply bg-[#1ad] text-[#fff] dark:text-[#252220];
+  }
+  /* Base Style end ==================================== */
+}

@@ -1,0 +1,29 @@
+{
+  "name": "@burmajs/css",
+  "version": "0.1.0",
+  "description": "Classless CSS",
+  "homepage": "https://github.com/burmajs/css#readme",
+  "bugs": {
+    "url": "https://github.com/burmajs/css/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/burmajs/css.git"
+  },
+  "license": "MIT",
+  "author": "Pho Thin Mg",
+  "type": "module",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i ./src/base.css -o ./dist/index.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.14",
+    "tailwindcss": "^4.0.14"
+  },
+  "exports": {
+    ".": {
+      "import": "./src/bcss.css"
+    }
+  },
+  "browser": "./dist/index.css"
+}
