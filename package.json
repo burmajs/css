@@ -12,18 +12,9 @@
   },
   "license": "MIT",
   "author": "Pho Thin Mg",
-  "type": "module",
-  "scripts": {
-    "build": "npx @tailwindcss/cli -i ./src/base.css -o ./dist/index.css --minify"
-  },
+  "scripts": {},
   "devDependencies": {
     "@tailwindcss/cli": "^4.0.14",
     "tailwindcss": "^4.0.14"
-  },
-  "exports": {
-    ".": {
-      "import": "./src/bcss.css"
-    }
-  },
-  "browser": "./dist/index.css"
+  }
 }
