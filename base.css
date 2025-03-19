@@ -165,8 +165,11 @@
     @apply last:caption-bottom last:my-[0.5em] last:mx-0;
   }
   /* code */
+  pre {
+    @apply p-0 overflow-x-auto;
+  }
   pre > code {
-    @apply relative p-[0.8em] border-l-[0.4em] border-l-teal-700 overflow-x-auto;
+    @apply relative p-[0.8em] border-l-[0.4em] border-l-teal-700;
   }
   code,
   kbd,
